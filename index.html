@@ -20,7 +20,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
     }
   </style>
 </head>
-<body class="bg-slate-50">
+<body class="bg-[#e8ede2]">
   <div id="root"></div>
 
   <script type="text/babel">
@@ -499,11 +499,11 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
 
       return (
         <div className="max-w-7xl mx-auto p-6 md:p-10 space-y-6">
-          <header className="bg-white rounded-2xl border border-slate-200 p-6">
+          <header className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
             <h1 className="text-3xl font-black text-slate-900">AirGradient Corrected PM2.5 Dashboard</h1>
           </header>
 
-          <section className="bg-white rounded-2xl border border-slate-200 p-6">
+          <section className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
             <label className="inline-block px-5 py-3 bg-slate-900 text-white font-semibold rounded-xl cursor-pointer hover:bg-slate-800">
               Upload AirGradient CSV Files
               <input
@@ -529,12 +529,12 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
 
           {stats && (
             <section className="grid grid-cols-2 md:grid-cols-6 gap-3">
-              <div className="bg-white border border-slate-200 rounded-xl p-4"><div className="text-xs text-slate-500">Rows</div><div className="text-xl font-bold">{stats.rows}</div></div>
-              <div className="bg-white border border-slate-200 rounded-xl p-4"><div className="text-xs text-slate-500">Sensors</div><div className="text-xl font-bold">{stats.sensors}</div></div>
-              <div className="bg-white border border-slate-200 rounded-xl p-4"><div className="text-xs text-slate-500">Days</div><div className="text-xl font-bold">{stats.days}</div></div>
-              <div className="bg-white border border-slate-200 rounded-xl p-4"><div className="text-xs text-slate-500">Min</div><div className="text-xl font-bold">{stats.min}</div></div>
-              <div className="bg-white border border-slate-200 rounded-xl p-4"><div className="text-xs text-slate-500">Mean</div><div className="text-xl font-bold">{stats.mean}</div></div>
-              <div className="bg-white border border-slate-200 rounded-xl p-4"><div className="text-xs text-slate-500">Max</div><div className="text-xl font-bold">{stats.max}</div></div>
+              <div className="bg-[#f3f6ed] border border-[#c7d0b7] rounded-xl p-4 shadow-[3px_3px_0_#c7d0b7]"><div className="text-xs text-slate-500">Rows</div><div className="text-xl font-bold">{stats.rows}</div></div>
+              <div className="bg-[#f3f6ed] border border-[#c7d0b7] rounded-xl p-4 shadow-[3px_3px_0_#c7d0b7]"><div className="text-xs text-slate-500">Sensors</div><div className="text-xl font-bold">{stats.sensors}</div></div>
+              <div className="bg-[#f3f6ed] border border-[#c7d0b7] rounded-xl p-4 shadow-[3px_3px_0_#c7d0b7]"><div className="text-xs text-slate-500">Days</div><div className="text-xl font-bold">{stats.days}</div></div>
+              <div className="bg-[#f3f6ed] border border-[#c7d0b7] rounded-xl p-4 shadow-[3px_3px_0_#c7d0b7]"><div className="text-xs text-slate-500">Min</div><div className="text-xl font-bold">{stats.min}</div></div>
+              <div className="bg-[#f3f6ed] border border-[#c7d0b7] rounded-xl p-4 shadow-[3px_3px_0_#c7d0b7]"><div className="text-xs text-slate-500">Mean</div><div className="text-xl font-bold">{stats.mean}</div></div>
+              <div className="bg-[#f3f6ed] border border-[#c7d0b7] rounded-xl p-4 shadow-[3px_3px_0_#c7d0b7]"><div className="text-xs text-slate-500">Max</div><div className="text-xl font-bold">{stats.max}</div></div>
             </section>
           )}
 
@@ -546,7 +546,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
 
 
           {sensors.length > 0 && (
-            <section className="bg-white rounded-2xl border border-slate-200 p-6">
+            <section className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
               <div className="flex flex-wrap gap-2 items-center">
                 {sensors.map((s, i) => {
                   const on = visibleSensors.includes(s);
@@ -554,7 +554,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
                     <button
                       key={s}
                       onClick={() => toggleSensor(s)}
-                      className={`px-3 py-1.5 rounded-lg text-sm font-semibold border ${on ? "text-white border-transparent" : "text-slate-700 border-slate-300 bg-white"}`}
+                      className={`px-3 py-1.5 rounded-lg text-sm font-semibold border ${on ? "text-white border-transparent" : "text-slate-700 border-[#c7d0b7] bg-[#f3f6ed]"}`}
                       style={on ? { backgroundColor: COLORS[i % COLORS.length] } : {}}
                     >
                       {s}
@@ -575,7 +575,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
 
           {dailySeries.length > 0 && (
             <>
-              <section className="bg-white rounded-2xl border border-slate-200 p-6">
+              <section className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
                 <div className="flex items-center justify-between mb-4">
                   <h2 className="text-xl font-bold">Phase 1 Daily Mean Corrected PM2.5</h2>
                 </div>
@@ -600,7 +600,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
                 </div>
               </section>
 
-              <section className="bg-white rounded-2xl border border-slate-200 p-6">
+              <section className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
                 <h2 className="text-xl font-bold mb-4">Phase 1 Daily Max Corrected PM2.5</h2>
                 {renderTopLegend(true)}
                 <div className="h-96">
@@ -623,7 +623,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
                 </div>
               </section>
 
-              <section className="bg-white rounded-2xl border border-slate-200 p-6">
+              <section className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
                 <h2 className="text-xl font-bold mb-4">Phase 2 Daily Mean Corrected PM2.5</h2>
                 {renderTopLegend(true)}
                 <div className="h-96">
@@ -646,7 +646,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
                 </div>
               </section>
 
-              <section className="bg-white rounded-2xl border border-slate-200 p-6">
+              <section className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
                 <h2 className="text-xl font-bold mb-4">Phase 2 Daily Max Corrected PM2.5</h2>
                 {renderTopLegend(true)}
                 <div className="h-96">
@@ -672,7 +672,7 @@ window.PRELOADED_ROWS = [{"sensor":"AG01-01","timestamp":"2026-01-31T15:00:00","
           )}
 
           {comparisonBarData.length > 0 && (
-            <section className="bg-white rounded-2xl border border-slate-200 p-6">
+            <section className="bg-[#f3f6ed] rounded-2xl border border-[#c7d0b7] p-6 shadow-[4px_4px_0_#c7d0b7]">
               <h2 className="text-xl font-bold mb-1">PM2.5 Exposure: 1-Hour vs 24-Hour Statistics</h2>
               <p className="text-sm text-slate-500 mb-3">
                 Hourly extremes compared against daily-mean extremes for each visible sensor.
